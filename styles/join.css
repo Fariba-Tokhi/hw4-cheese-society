@@ -77,8 +77,8 @@ footer {
 
 .checkbox-group {
   display: flex;
-  gap: var(--space-2);
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--space-1);
 }
 
 .checkbox-group label {
@@ -154,9 +154,12 @@ dialog ul li {
   .form-card {
     padding: var(--space-2);
   }
+}
 
+@media (min-width: 40rem) {
   .checkbox-group {
-    flex-direction: column;
-    gap: var(--space-1);
+    flex-direction: row;
+    gap: var(--space-2);
+    flex-wrap: wrap;
   }
 }
