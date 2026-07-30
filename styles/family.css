@@ -44,7 +44,7 @@ article {
 .hero-image {
   max-width: 10rem;
   margin: 0 auto var(--space-3);
-  view-transition-name: cheese-hero; /* CSS validator may flag this as an error, but it's required for view transitions and works in Chrome */
+  view-transition-name: auto; /* CSS validator may flag this as an error, but it's required for view transitions and works in Chrome */
 }
 
 article h2 {
