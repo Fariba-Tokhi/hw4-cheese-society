@@ -41,8 +41,9 @@ footer {
   background: var(--panel);
 }
 
-.form-card h1 {
+.form-card h2 {
   margin-block-end: var(--space-1);
+  font-size: var(--text-xl);
 }
 
 .form-group {
