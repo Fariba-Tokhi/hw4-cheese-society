@@ -67,6 +67,7 @@ footer {
   border: var(--border);
   font-size: var(--text-m);
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -83,10 +84,18 @@ footer {
 
 .checkbox-group label {
   font-weight: 400;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--space-1);
   font-size: var(--text-m);
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.checkbox-group input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .form-actions {
@@ -146,7 +155,11 @@ dialog ul li {
   margin-block-start: var(--space-2);
 }
 
-/* Mobile styles - below 40rem */
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Mobile: Stack checkboxes vertically */
 @media (max-width: 40rem) {
   nav ul {
     flex-wrap: wrap;
@@ -157,18 +170,53 @@ dialog ul li {
     padding: var(--space-2);
   }
 
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    width: 100%;
+  }
+
   .checkbox-group label {
     font-size: var(--text-s);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
     width: 100%;
+    padding: var(--space-1) 0;
     word-break: break-word;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-actions button {
+    width: 100%;
+    text-align: center;
   }
 }
 
-/* Desktop styles - above 40rem */
-@media (min-width: 40rem) {
+/* Desktop: Checkboxes in a row */
+@media (min-width: 40.01rem) {
   .checkbox-group {
+    display: flex;
     flex-direction: row;
-    gap: var(--space-2);
+    gap: var(--space-3);
     flex-wrap: wrap;
+  }
+
+  .checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    white-space: nowrap;
   }
 }
