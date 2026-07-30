@@ -26,6 +26,15 @@ main {
   padding: var(--space-3) 0;
 }
 
+main h2 {
+  font-size: var(--text-xl);
+}
+
+main h3 {
+  font-size: var(--text-l);
+  margin-block: var(--space-3) var(--space-1);
+}
+
 footer {
   margin-inline: calc(-1 * var(--space-3));
   padding-inline: var(--space-3);
@@ -47,7 +56,10 @@ footer {
   font-style: italic;
 }
 
-/* Clear fix for the float */
+.logo-about {
+  max-width: 10rem;
+}
+
 article::after {
   content: "";
   display: table;
