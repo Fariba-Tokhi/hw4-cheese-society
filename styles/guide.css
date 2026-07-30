@@ -36,17 +36,23 @@ footer {
 }
 
 .family-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
   margin-block: var(--space-3);
+  text-align: center;
 }
 
 .family-card {
+  display: inline-block;
+  width: calc(50% - var(--space-2));
+  margin: 0 var(--space-1) var(--space-2) 0;
   padding: var(--space-2);
   border: var(--border);
   text-align: center;
   background: var(--panel);
+  vertical-align: top;
+}
+
+.family-card:nth-child(even) {
+  margin-right: 0;
 }
 
 .family-card img {
@@ -69,7 +75,13 @@ footer {
 }
 
 @media (max-width: 40rem) {
-  .family-grid {
-    grid-template-columns: 1fr;
+  .family-card {
+    display: block;
+    width: 100%;
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  .family-card:nth-child(even) {
+    margin-right: 0;
   }
 }
