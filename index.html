@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The CSE Cheese Society</title>
+  <meta name="description" content="The CSE Cheese Society — a community of cheese enthusiasts at CSE. Taste, learn, and discuss cheeses from around the world.">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="CSE Cheese Society logo">
+      <h1>The CSE Cheese Society</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="guide/index.html">Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Welcome to The CSE Cheese Society</h2>
+    <p>We are a community of students, staff, and cheese enthusiasts who gather to taste, learn about, and discuss cheeses from around the world. Whether you are an experienced cheese connoisseur or simply cheese-curious, you are welcome here.</p>
+    <p>Explore our cheese guide, learn more about the Society, or join us at an upcoming tasting.</p>
+  </main>
+
+  <aside>
+    <h3>Cheese of the Month</h3>
+    <p>This month, we are celebrating <strong>blue cheese</strong>—bold, distinctive, and full of character.</p>
+    <img src="images/cheese-blue.svg" alt="Blue cheese illustration" style="max-width: 8rem; margin: var(--space-1) auto;">
+    <button commandfor="cheese-fact" command="toggle-popover" style="margin-top: var(--space-1); padding: var(--space-1) var(--space-2); background: var(--accent); color: var(--paper); border: none; border-radius: 0.25rem; cursor: pointer;">
+      Show Cheese Fact
+    </button>
+    <div id="cheese-fact" popover>
+      <p><strong>Cheese Fact:</strong> Cheese is one of the world's oldest prepared foods, with evidence of cheesemaking dating back thousands of years.</p>
+    </div>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 The CSE Cheese Society. Cheese responsibly.</p>
+  </footer>
+</body>
+</html>

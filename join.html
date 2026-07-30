@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join The CSE Cheese Society</title>
+  <meta name="description" content="Join The CSE Cheese Society — free membership, monthly tastings, and real cheese.">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="CSE Cheese Society logo">
+      <h1>The CSE Cheese Society</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="guide/index.html">Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="form-card">
+      <h2>Join The CSE Cheese Society</h2>
+      <p>Membership is free, meetings are monthly, and the cheese is real. Fill out the form and the Keeper of the Cave will be in touch.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="family">Which family calls to you?</label>
+          <select id="family" name="family">
+            <option value="fresh">Fresh</option>
+            <option value="soft">Soft-ripened</option>
+            <option value="blue">Blue</option>
+            <option value="hard">Hard</option>
+            <option value="undecided">Undecided — that's why I'm here</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Which of these have you tasted?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="tasted" value="brie"> Brie</label>
+            <label><input type="checkbox" name="tasted" value="roquefort"> Roquefort</label>
+            <label><input type="checkbox" name="tasted" value="aged-gouda"> Aged Gouda</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="favorite">Tell us your favorite cheese</label>
+          <input type="text" id="favorite" name="favorite" placeholder="e.g. Comte">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Sign me up</button>
+          <button type="button" commandfor="why-join-dialog" command="show-modal" class="btn-secondary">Why join?</button>
+        </div>
+      </form>
+    </section>
+
+    <dialog id="why-join-dialog">
+      <h2>Why join?</h2>
+      <ul>
+        <li><strong>Monthly tastings.</strong> The Society buys the cheese. You bring opinions.</li>
+        <li><strong>Voting rights</strong> in the Cheese of the Month election.</li>
+        <li>Access to <strong>THE CAVE</strong> (a mini-fridge, but a very serious one).</li>
+        <li>A laminated membership card featuring the cheese of your choice.</li>
+        <li>Amnesty program for recovering blue-cheese skeptics.</li>
+      </ul>
+      <div class="dialog-actions">
+        <button commandfor="why-join-dialog" command="close" class="btn-primary">I'm convinced</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 The CSE Cheese Society. Cheese responsibly.</p>
+  </footer>
+</body>
+</html>

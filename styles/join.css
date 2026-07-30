@@ -1,0 +1,161 @@
+/* Join page — built from 06-flex-page + 05-flex-centering */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+nav {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--panel);
+}
+
+nav ul {
+  flex-direction: row;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.form-card {
+  max-width: 32rem;
+  width: 100%;
+  padding: var(--space-3);
+  border: var(--border);
+  border-block-start: var(--rule);
+  background: var(--panel);
+}
+
+.form-card h1 {
+  margin-block-end: var(--space-1);
+}
+
+.form-group {
+  margin-block-end: var(--space-2);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: var(--space-1);
+}
+
+.form-group .required {
+  color: var(--accent);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: var(--space-1);
+  border: var(--border);
+  font-size: var(--text-m);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-block-start: var(--space-2);
+}
+
+.btn-primary {
+  padding: var(--space-1) var(--space-3);
+  background: var(--accent);
+  color: var(--paper);
+  border: none;
+  border-radius: 0.25rem;
+  font-size: var(--text-m);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  padding: var(--space-1) var(--space-3);
+  background: var(--panel);
+  color: var(--ink);
+  border: var(--border);
+  border-radius: 0.25rem;
+  font-size: var(--text-m);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--paper);
+}
+
+/* Dialog styles */
+dialog h2 {
+  margin-block-end: var(--space-2);
+}
+
+dialog ul {
+  list-style: disc;
+  padding-inline-start: var(--space-3);
+  margin-block: 0 var(--space-2);
+}
+
+dialog ul li {
+  margin-block-end: var(--space-1);
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-block-start: var(--space-2);
+}
+
+@media (max-width: 40rem) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-card {
+    padding: var(--space-2);
+  }
+
+  .checkbox-group {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}

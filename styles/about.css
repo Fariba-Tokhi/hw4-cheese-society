@@ -1,0 +1,89 @@
+/* About page — built from 02-float */
+body {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: 0 var(--space-3);
+  display: block;
+}
+
+header {
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
+}
+
+nav {
+  margin-inline: calc(-1 * var(--space-3));
+  padding: var(--space-2) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--panel);
+}
+
+nav ul {
+  flex-direction: row;
+}
+
+main {
+  padding: var(--space-3) 0;
+}
+
+footer {
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
+}
+
+.float-figure {
+  float: left;
+  width: 12rem;
+  margin: 0 var(--space-3) var(--space-2) 0;
+  padding: var(--space-2);
+  border: var(--border);
+  background: var(--panel);
+  text-align: center;
+}
+
+.float-figure figcaption {
+  margin-block-start: var(--space-1);
+  font-size: var(--text-s);
+  font-style: italic;
+}
+
+/* Clear fix for the float */
+article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+details {
+  margin-block: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border);
+  background: var(--panel);
+}
+
+details summary {
+  cursor: pointer;
+}
+
+details summary:hover {
+  color: var(--accent);
+}
+
+details p {
+  margin-block-start: var(--space-1);
+  padding-block-start: var(--space-1);
+  border-block-start: var(--border);
+}
+
+@media (max-width: 40rem) {
+  .float-figure {
+    float: none;
+    width: 100%;
+    margin: 0 0 var(--space-2);
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

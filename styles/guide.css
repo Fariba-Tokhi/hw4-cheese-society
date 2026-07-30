@@ -1,0 +1,73 @@
+/* Guide page — built from 01-flow (normal flow only) */
+body {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: 0 var(--space-3);
+  display: block;
+}
+
+header {
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
+}
+
+nav {
+  margin-inline: calc(-1 * var(--space-3));
+  padding: var(--space-2) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--panel);
+}
+
+nav ul {
+  flex-direction: row;
+}
+
+main {
+  padding: var(--space-3) 0;
+}
+
+footer {
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-block: var(--space-3);
+}
+
+.family-card {
+  padding: var(--space-2);
+  border: var(--border);
+  text-align: center;
+  background: var(--panel);
+}
+
+.family-card img {
+  max-width: 6rem;
+  margin: 0 auto var(--space-1);
+}
+
+.family-card h3 {
+  margin-block: var(--space-1);
+}
+
+.family-card h3 a {
+  text-decoration: none;
+}
+
+.family-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.family-image {
+  view-transition-name: auto; /* CSS validator may flag this as an error, but it's required for view transitions and works in Chrome */
+}
+
+@media (max-width: 40rem) {
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+}

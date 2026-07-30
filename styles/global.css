@@ -1,0 +1,95 @@
+/* Reset, type, and color only — never layout */
+@layer reset, base;
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  figure,
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@layer base {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: var(--text-m);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-block: 0 var(--space-2);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: var(--text-xl);
+  }
+  h2 {
+    font-size: var(--text-l);
+  }
+  h3 {
+    font-size: var(--text-m);
+  }
+
+  p {
+    margin-block: 0 var(--space-2);
+  }
+
+  a {
+    color: var(--ink);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: var(--underline-width);
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  dialog {
+    max-width: 30rem;
+    padding: var(--space-3);
+    border: var(--border);
+    border-radius: 0.25rem;
+    background: var(--paper);
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
