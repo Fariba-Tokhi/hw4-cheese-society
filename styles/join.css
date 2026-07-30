@@ -86,6 +86,7 @@ footer {
   display: flex;
   align-items: center;
   gap: var(--space-1);
+  font-size: var(--text-m);
 }
 
 .form-actions {
@@ -145,7 +146,8 @@ dialog ul li {
   margin-block-start: var(--space-2);
 }
 
-@media (max-width: 10rem) {
+/* Mobile styles - below 40rem */
+@media (max-width: 40rem) {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
@@ -154,9 +156,16 @@ dialog ul li {
   .form-card {
     padding: var(--space-2);
   }
+
+  .checkbox-group label {
+    font-size: var(--text-s);
+    width: 100%;
+    word-break: break-word;
+  }
 }
 
-@media (min-width: 10rem) {
+/* Desktop styles - above 40rem */
+@media (min-width: 40rem) {
   .checkbox-group {
     flex-direction: row;
     gap: var(--space-2);
