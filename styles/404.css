@@ -1,19 +1,40 @@
 /* 404 page — built from 05-flex-centering */
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   min-height: 100svh;
-  padding: var(--space-3);
-  margin: 0;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+nav {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--panel);
+}
+
+nav ul {
+  flex-direction: row;
 }
 
 main {
-  display: contents;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 .error-card {
   max-width: 32rem;
+  width: 100%;
   padding: var(--space-4);
   border: var(--border);
   border-block-start: var(--rule);
@@ -29,6 +50,7 @@ main {
 
 .error-card h1 {
   margin-block-end: var(--space-2);
+  font-size: var(--text-xl);
 }
 
 .error-card p {
@@ -50,4 +72,25 @@ main {
 .btn-primary:hover {
   opacity: 0.85;
   color: var(--paper);
+}
+
+/* Mobile styles */
+@media (max-width: 40rem) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .error-card {
+    padding: var(--space-3);
+    margin: 0 var(--space-2);
+  }
+
+  .sad-cheese {
+    max-width: 6rem;
+  }
+
+  .error-card h1 {
+    font-size: var(--text-l);
+  }
 }
