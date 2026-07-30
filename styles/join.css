@@ -145,7 +145,7 @@ dialog ul li {
   margin-block-start: var(--space-2);
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 10rem) {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
